@@ -51,7 +51,14 @@ export async function GET(request, { params }) {
       lastname: "UK",
       phone: "+442033990928"
     },
-
+    {
+      id: 7,
+      name: "Adnan US",
+      firstname: "Adnan",
+      middlename: "",
+      lastname: "US",
+      phone: "+16197607777"
+    }
   ]
 
   const filtered = contacts.find(contacts => contacts.phone === phone)
