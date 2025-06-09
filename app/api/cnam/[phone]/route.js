@@ -34,6 +34,14 @@ export async function GET(request, { params }) {
       middlename: "",
       lastname: "Galijasevic",
       phone: "62336203"
+    },
+    {
+      id: 4,
+      name: "Adnan Privatni",
+      firstname: "Adnan",
+      middlename: "",
+      lastname: "Privatni",
+      phone: "38763021445"
     }
   ]
 
