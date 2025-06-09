@@ -49,7 +49,7 @@ export async function GET(request, { params }) {
       firstname: "Adnan",
       middlename: "",
       lastname: "UK",
-      phone: "442033990928"
+      phone: "+442033990928"
     }
   ]
 
