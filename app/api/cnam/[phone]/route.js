@@ -64,12 +64,7 @@ export async function GET(request, { params }) {
 
   return Response.json(
     {
-      id: 10,
-      name: "Bicom Test",
-      firstname: "Bicom",
-      middlename: "",
-      lastname: "Test",
-      phone: "923849298324234239843289"
+
     }
   )
 }
