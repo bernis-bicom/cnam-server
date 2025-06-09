@@ -36,12 +36,20 @@ export async function GET(request, { params }) {
       phone: "62336203"
     },
     {
-      id: 4,
+      id: 5,
       name: "Adnan Privatni",
       firstname: "Adnan",
       middlename: "",
       lastname: "Privatni",
       phone: "38763021445"
+    },
+    {
+      id: 6,
+      name: "Adnan UK",
+      firstname: "Adnan",
+      middlename: "",
+      lastname: "UK",
+      phone: "442033990928"
     }
   ]
 
@@ -54,6 +62,13 @@ export async function GET(request, { params }) {
   }
 
   return Response.json(
-    contacts
+    {
+      id: 10,
+      name: "Bicom Test",
+      firstname: "Bicom",
+      middlename: "",
+      lastname: "Test",
+      phone: "923849298324234239843289"
+    }
   )
 }
