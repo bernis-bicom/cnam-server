@@ -50,6 +50,14 @@ export async function GET(request, { params }) {
       middlename: "",
       lastname: "UK",
       phone: "+442033990928"
+    },
+    {
+      id: 6,
+      name: "Adnan US",
+      firstname: "Adnan",
+      middlename: "",
+      lastname: "US",
+      phone: "+16197607777"
     }
   ]
 
