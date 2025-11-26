@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CNAM Server
+
+## Project Description
+The CNAM Server is a simple API that provides Caller ID Name (CNAM) lookup functionality. Given a phone number, it returns a hardcoded name associated with that number.
+
+## Features
+-   **CNAM Lookup API:** Exposes a GET endpoint `/api/cnam/[phone]` to retrieve a caller's name.
+-   **Hardcoded Data:** Currently uses a hardcoded list of phone numbers and names for demonstration purposes.
+
+## Technologies Used
+-   [Next.js](https://nextjs.org/) (v15.3.3) - React framework for building web applications.
+-   [React](https://react.dev/) (v19.0.0) - JavaScript library for building user interfaces.
+-   [Tailwind CSS](https://tailwindcss.com/) (v4) - A utility-first CSS framework for rapid UI development.
 
 ## Getting Started
 
-First, run the development server:
+Follow these instructions to set up and run the project locally.
+
+### Prerequisites
+
+Make sure you have Node.js installed on your machine. It is recommended to use the latest LTS version.
+
+### Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-username/cnam-server.git
+    cd cnam-server
+    ```
+    (Note: Replace `https://github.com/your-username/cnam-server.git` with the actual repository URL if different.)
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+### Running the Development Server
+
+To run the application in development mode with hot-reloading:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the default Next.js welcome page.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Building for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To build the application for production:
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Running the Production Server
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To start the production server after building:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm start
+```
 
-## Deploy on Vercel
+## Usage
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The primary functionality of this project is exposed via its API endpoint.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### CNAM Lookup API Endpoint
+
+-   **URL:** `/api/cnam/[phone]`
+-   **Method:** `GET`
+-   **URL Parameters:** `phone` (required) - The phone number to look up.
+-   **Example Request:**
+    ```bash
+    curl http://localhost:3000/api/cnam/1234567890
+    ```
+-   **Example Success Response (JSON):**
+    ```json
+    {
+        "name": "John Doe",
+        "phone": "1234567890"
+    }
+    ```
+-   **Example Not Found Response (JSON):**
+    ```json
+    {
+        "name": "Unknown Caller",
+        "phone": "9876543210"
+    }
+    ```
+
+## Deployment
+
+This Next.js application can be easily deployed to [Vercel](https://vercel.com/), the creators of Next.js.
+
+You can deploy your own instance of this application with a single click using the button found on the default homepage when running the development server.
